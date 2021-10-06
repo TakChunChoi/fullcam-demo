@@ -1,0 +1,26 @@
+.container {
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.feature {
+  position: relative;
+  border-right: solid 1px #8bd1d9;
+  text-align: center;
+}
+h1 {
+  padding: 1rem;
+  //   position: absolute;
+  //   margin: 1rem 0;
+  width: 100%;
+  //   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-image {
+  background-image: url("/assets/images/plants.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}

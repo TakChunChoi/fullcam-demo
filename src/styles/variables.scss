@@ -1,0 +1,8 @@
+$primary: #005677;
+@import "~bootstrap/scss/bootstrap";
+
+$fullcam-theme-colors: (
+  "primary": $primary,
+);
+
+$theme-colors: map-merge($theme-colors, $fullcam-theme-colors);

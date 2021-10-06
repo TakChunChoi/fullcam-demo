@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 feature p-4">
+      <img class="" width="223" height="125" src="assets/images/logo.png" />
+      <h1>Full Carbon Accounting Model (FullCAM)</h1>
+      <!-- <div class="feature-image"></div> -->
+    </div>
+    <div class="col-md-6 form-container p-4">
+      <ng-container [@fadeAnimation] *ngIf="formType == 'login'">
+        <ng-container *ngTemplateOutlet="login"></ng-container>
+      </ng-container>
+
+      <ng-container [@fadeAnimation] *ngIf="formType == 'register'">
+        <ng-container *ngTemplateOutlet="register"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #login>
+  <h2>Login</h2>
+  <p>
+    Don't have an account?
+    <a (click)="changeFormType('register')">Create account</a>
+  </p>
+
+  <form>
+    <fieldset>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="email" class="form-control" required />
+        <div id="passwordHelpBlock" class="invalid-feedback">
+          required field test
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Password</label
+        >
+        <input type="password" class="form-control" />
+      </div>
+
+      <a (click)="changeFormType('register')">Reset password</a>
+
+      <button type="submit" class="btn btn-primary float-end">Login</button>
+    </fieldset>
+  </form>
+</ng-template>
+
+<ng-template #register>
+  <h2>Register</h2>
+  <p>
+    <a (click)="changeFormType('login')"
+      ><i class="bi bi-chevron-left"></i> Back to login</a
+    >
+  </p>
+  <form>
+    <fieldset>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="email" class="form-control" required />
+        <div id="passwordHelpBlock" class="invalid-feedback">
+          required field test
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mobile</label>
+        <input type="text" class="form-control" required />
+        <div id="passwordHelpBlock" class="invalid-feedback">
+          required field test
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Password</label
+        >
+        <input type="password" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Confirm Password</label
+        >
+        <input type="password" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary float-end">Register</button>
+    </fieldset>
+  </form>
+</ng-template>
