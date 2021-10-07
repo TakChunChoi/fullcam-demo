@@ -1,26 +1,50 @@
-.container {
-  max-width: 1024px;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-}
-.feature {
-  position: relative;
-  border-right: solid 1px #8bd1d9;
-  text-align: center;
-}
-h1 {
-  padding: 1rem;
-  //   position: absolute;
-  //   margin: 1rem 0;
-  width: 100%;
-  //   background-color: rgba(255, 255, 255, 0.7);
-}
-
 .feature-image {
   background-image: url("/assets/images/plants.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100%;
+  height: 100vh;
+  width: 50vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.container {
+  // display: flex;
+  // align-items: center;
+  height: 100vh;
+  .row {
+    height: 100vh;
+
+    .feature-container {
+      display: flex;
+      align-items: center;
+
+      .feature {
+        .logo {
+          margin-top: 1rem;
+        }
+        h1 {
+          margin: 1rem 0;
+        }
+
+        position: relative;
+        text-align: center;
+        padding: 1rem;
+        padding-right: calc(1rem + 25px);
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-right: -25px;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      align-items: center;
+      .forms {
+        width: 100%;
+      }
+    }
+  }
 }

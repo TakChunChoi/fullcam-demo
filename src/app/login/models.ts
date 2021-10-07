@@ -1,1 +1,1 @@
-export type FormTypes = 'login' | 'register';
+export type FormTypes = 'login' | 'register' | 'passwordReset' | 'emailVerification';

@@ -1,5 +1,16 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import "variables";
-
+* {
+  box-sizing: border-box;
+}
 h1 {
   color: $primary;
+}
+
+a {
+  cursor: pointer;
+}
+
+.text-pink {
+  color: #b04590;
 }

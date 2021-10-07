@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren } from '@angular/core';
 import { fadeAnimation } from '../shared/animations';
 import { FormTypes } from './models';
 
@@ -12,7 +12,10 @@ import { FormTypes } from './models';
 
   
 export class LoginComponent implements OnInit {
+  
+  @ViewChildren('')
   public formType:FormTypes = "login"
+  
   
   constructor() { }
 
